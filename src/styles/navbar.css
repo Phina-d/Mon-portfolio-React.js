@@ -1,0 +1,133 @@
+/* Base navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.burger-btn {
+  display: none;             /* caché sur desktop */
+  background: none;
+  border: none;
+  font-size: 2rem;           /* taille bien visible */
+  color: #007bff;
+  cursor: pointer;
+  padding: 0.3rem 3rem;      /* espace autour du bouton */
+  border-radius: 4px;
+  margin-left: auto;         /* pousse à droite */
+  transition: background-color 0.3s ease;
+  user-select: none;
+  position: relative;
+  z-index: 2001;
+}
+
+.burger-btn:hover {
+  background-color: rgba(0,123,255,0.2);
+  color: #0056b3;
+}
+
+/* Affiche le bouton sur mobile */
+@media (max-width: 700px) {
+  .burger-btn {
+    display: block;
+  }
+}
+
+
+/* Menu desktop */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Liens */
+.nav-right a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Bouton dark mode */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #007bff;
+  cursor: pointer;
+}
+
+/* ====================
+   RESPONSIVE (mobile)
+==================== */
+@media (max-width: 768px) {
+  .burger-btn {
+    display: block;
+  }
+
+  .nav-right {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    height: calc(100vh - 60px);
+    width: 240px;
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2rem 1.5rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+  }
+
+  .nav-right.open {
+    transform: translateX(0);
+  }
+
+  .nav-right a,
+  .nav-right .theme-toggle {
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* ====================
+   DARK MODE
+==================== */
+.navbar.dark {
+  background-color: #121212;
+}
+
+.navbar.dark .nav-logo,
+.navbar.dark .burger-btn,
+.navbar.dark .nav-right a,
+.navbar.dark .theme-toggle {
+  color: #eee;
+}
+
+.navbar.dark .nav-right {
+  background-color: #1e1e1e;
+}

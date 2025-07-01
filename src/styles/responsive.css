@@ -1,0 +1,102 @@
+/* responsive.css */
+
+/* Petits écrans mobiles (≤ 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  /* Navbar */
+  .nav-container {
+    padding: 0.5rem 1rem;
+  }
+  .nav-logo {
+    font-size: 1.25rem;
+  }
+  .nav-right a {
+    font-size: 1rem;
+  }
+  .burger-btn {
+    font-size: 1.6rem;
+  }
+
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .project-card {
+    font-size: 0.9rem;
+  }
+
+  /* Contact */
+  .contact-container {
+    padding: 1.5rem 1rem;
+  }
+  .contact-title {
+    font-size: 1.5rem;
+  }
+  .btn-submit {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-icon {
+    font-size: 1.3rem;
+  }
+}
+
+/* Tablettes et petits écrans moyens (481px à 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  /* Navbar */
+  .nav-container {
+    padding: 0.7rem 1.2rem;
+  }
+  .nav-logo {
+    font-size: 1.4rem;
+  }
+  .nav-right a {
+    font-size: 1.1rem;
+  }
+  .burger-btn {
+    font-size: 1.7rem;
+  }
+
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.3rem;
+  }
+
+  /* Contact */
+  .contact-container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* Footer */
+  .footer-icon {
+    font-size: 1.4rem;
+  }
+}
+
+/* Grands écrans (≥ 1024px) */
+@media (min-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

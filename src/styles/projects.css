@@ -1,0 +1,211 @@
+/* projects.css */
+
+/* Conteneur principal */
+.projects-page {
+  padding: 2rem;
+   min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+/* Conteneur des projets */
+.projects-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Titre principal */
+.projects-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+/* Filtres */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.25rem;
+  background-color:rgb(226, 239, 240);       /* gris bleuté très doux */
+  color: #111;                     /* texte sombre */
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #cbd5e1;       /* léger foncé au hover */
+}
+
+.filter-btn.active {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Grille des projets */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Carte projet */
+.project-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Image du projet */
+.project-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Contenu projet */
+.project-content {
+  padding: 1rem 1.25rem 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Titre projet */
+.project-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  color: #007bff;
+}
+
+/* Description projet */
+.project-desc {
+  flex-grow: 1;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+/* Tags technologies */
+.project-tags {
+  margin-bottom: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #e0e7ff;
+  color: #3730a3;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 12px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Liens (GitHub / Démo) */
+.project-links a {
+  margin-right: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #0056b3;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.pagination button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.pagination span {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .projects-title {
+    font-size: 2rem;
+  }
+
+  .filter-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .project-img {
+    height: 140px;
+  }
+}
+/* Responsive projects grid */
+@media (max-width: 600px) {
+  .projects-title {
+    font-size: 2rem;
+  }
+
+  .filter-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-img {
+    height: 140px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
