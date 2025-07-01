@@ -8,7 +8,7 @@ const projects = [
     image: '/images/portfolio.jpg',
     technologies: ['React', 'Tailwind CSS'],
     github: 'https://github.com/Phina-d/Mon-portfolio-React.js.git',
-    demo: 'https://mon portfolio-react.js-git-master-phina-ds-projects.vercel.app/',
+    demo: 'https://mon-portfolio-react-js-1wcx-git-master-phina-ds-projects.vercel.app/',
   },
   {
     title: 'Bootstrap Galerie',
